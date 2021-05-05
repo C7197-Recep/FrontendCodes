@@ -1,0 +1,232 @@
+html, body, main{
+    margin:0;
+    padding:0;
+}
+
+* {
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align:center;
+    padding:0.2em;
+}
+
+header{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background-color: #35424a;
+    border-bottom:4px solid #9f4f85;
+    font-size:0.7em;
+}
+
+header > *{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:stretch;
+    justify-content:space-between;
+}
+
+header span{
+   color: #9f4f85;
+   padding:0;
+   text-align: left;
+}
+
+header h1{
+    color:white;
+    text-align: left;
+}
+
+header a{
+    color:white;
+}
+
+nav{
+    font-size:1.2em;
+}
+
+nav a{
+    padding:0 1em;
+}
+.selected a{   
+   color: #9f4f85;
+}
+
+.footer{
+    background-color: #35424a;
+    color:white;
+}
+
+/*MAIN SAYFASI*/
+.section-main{
+    background-image: url("./images/showcase.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment:scroll;
+    min-height: 20em;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-main > h1{
+    font-size:1.8em;
+}
+
+.section-wide{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #35424a;
+    color:white;
+    font-size: 0.8em;
+    padding:1em;
+}
+
+#submit-btn{
+    background-color:orangered;
+    color:white;
+    border:none;
+    padding:0.3em;
+}
+
+#email{
+    text-align:left;
+}
+
+.section{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.section > div{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:center;
+    width:300px;
+}
+
+.section img{
+    width:100px;
+}
+
+
+.about{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows:1fr 0.5fr 2fr;
+    gap:0.5em 1em;
+    grid-template-areas:
+    "grid-left grid-right"
+    "grid-left2 grid-right"
+    "grid-footer grid-footer";    
+    padding:1em;
+    background-color:rgb(238, 238, 238);
+}
+
+.about *{
+    text-align:left;
+}
+
+.services{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows:1fr 1fr;
+    gap:0.5em 1em;
+    grid-template-areas:
+    "grid-left grid-right"
+    "grid-left empty";    
+    padding:1em;
+    background-color:rgb(238, 238, 238);
+}
+
+.services *{
+    text-align:left;
+    padding:0;
+}
+
+.grid-left{
+    grid-area: grid-left;
+}
+
+.grid-left2{
+    grid-area: grid-left2;
+}
+
+.grid-right{
+    grid-area: grid-right;
+}
+
+
+.div-light{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(218, 218, 214);
+    color:black;
+    font-size: 0.8em;
+    padding:1em;    
+    margin:1em 0;
+}
+
+.services .grid-right{
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+    font-size: 1em;
+}
+.services .grid-right *{
+    display: block;
+    width:100%;
+}
+.services .grid-right button{
+    width:50px;
+    height:30px;
+    background-color:orangered;
+    color:white;
+    border:none;
+    margin:1em 0;
+    text-align: center;
+}
+@media (max-width:800px) {
+    .section > div{
+        width:100%;
+    }
+    .about{
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows:1fr 1fr 2fr;
+        gap:0.5em 1em;
+        grid-template-areas:
+        "grid-left"
+        "grid-left2"
+        "grid-right";    
+        padding:1em;
+        background-color:rgb(238, 238, 238);
+    }
+    .services{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:2fr 1fr;
+        gap:0.5em 1em;
+        grid-template-areas:
+        "grid-left"
+        "grid-right";    
+        padding:1em;
+        background-color:rgb(238, 238, 238);
+    }
+    
+}

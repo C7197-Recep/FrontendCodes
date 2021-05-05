@@ -1,0 +1,57 @@
+body{
+    background-image: url("guess.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+body > *{
+    background-color: black;
+    color:rgb(234, 255, 47);
+    opacity:0.8;
+    border-radius: 10px;
+}
+body > * > *{
+    margin:1em auto;
+    width:100%;
+    position: relative;
+    display:block;
+    text-align:center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5em;
+}
+h3{
+    color:white;
+}
+
+main{
+    padding:1em; 
+}
+
+span{
+    color:white;
+}
+
+#todo{
+    line-height: 2em;
+    width: 300px;
+}
+
+#todo, #add{
+    line-height: 2em;
+}
+
+.todo-item-div{
+    background-color:gray;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding:0.4em;
+    color:white;
+    background-color: rgb(31, 50, 59);
+}
+
+.done{
+    text-decoration: line-through;
+}

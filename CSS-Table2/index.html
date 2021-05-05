@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            height: 50%;
+        }
+        th {
+            height: 40px;
+            text-align: center;
+            vertical-align: bottom;
+            padding: 20px;
+            /* background-color: turquoise; */
+        }
+        td{
+            height: 30px;
+            /* text-align:justify; */
+            vertical-align: middle;
+            padding: 10px;
+            /* background-color: tomato; */
+            /* color: white; */
+            font-size: 24px;
+        }
+        /* th:hover{
+            background-color: gray;
+        } */
+        /* td:hover{
+            background-color: gray;
+        } */
+        tr:nth-child(even){
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Table BlaBLa</caption>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+        <tr>
+            <td>Mccarthy</td>
+            <td>silva</td>
+        </tr>
+        <tr>
+            <td>Joseph</td>
+            <td>Antuan</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Sun</td>
+        </tr>
+    </table>
+</body>
+</html>

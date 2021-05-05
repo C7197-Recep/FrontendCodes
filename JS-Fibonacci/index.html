@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color: black;
+            color:yellow;
+            font-size:20px;
+        }
+        div{
+            border:1px dashed blue;
+            margin:10px;
+            display: block;
+        }
+        div *{
+            display: block;
+            margin: 10px auto;
+            border: 1px solid blueviolet;
+            text-align:center;
+        }
+        div p{
+            display: block;
+            width:100%;
+            height:100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <label for="string">Enter a number to get fibonacci value:</label>
+        <input type="text" name="string" cols="auto" rows="auto" id="string">
+        <button onclick="fibo()">Get Fibonacci Value</button>
+    </div>
+
+    <div>
+        <p id="output">Output</p>
+    </div>
+    <script>
+        function fibo(){
+            let n=document.getElementById("string").value;
+            let first=0;
+            let second=1;
+            let last=0;
+            let series=0;
+            for (let i=1; i<n; i++){
+                last=first+second;
+                first=second;
+                second=last;
+                series=series+", "+last;
+            }
+            document.getElementById("output").innerText=series;
+        }
+    </script>
+</body>
+</html>

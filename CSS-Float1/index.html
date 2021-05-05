@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            /*IMG resim dışında da olsa yazılar resmi kapatmıyor
+            float sayesinde*/
+            float: left;
+            margin:5px;
+        }
+        p {
+            border: 1px solid;
+            /*overflow:auto;*/
+            background-color:yellow;
+            /*elementin sol tarafında float olan element varsa
+            bu elementten kurtarır*/
+            clear:left;
+        }
+        #div1{
+            background-color: green;
+            float:left;
+        }
+        #div2{
+            background-color: blue;
+            float:left;
+        }
+        #div3{
+            background-color: red;
+            float:right;
+        }
+        div{
+        
+        }
+    </style>
+</head>
+<body>
+    <img src="https://picsum.photos/id/211/600/400" alt="Ship_Picture"> 
+    <p>Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Quia ducimus quidem consectetur adipisci, modi aliquid, temporibus vel qui architecto
+        laboriosam sunt vero fugiat et nulla error corporis laborum ratione nesciunt.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, nobis doloribus ipsa similique maiores soluta laudantium placeat pariatur molestiae temporibus!
+    </p>
+    <div id="div1">DİV1</div>
+    <div id="div2">DİV2</div>
+    <div id="div3">DİV3</div>
+</body>
+</html>

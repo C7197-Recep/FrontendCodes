@@ -1,0 +1,74 @@
+
+  
+.container {
+    width: 400px;
+    background-color: rgb(76, 146, 151);
+    border-radius: 3px;
+    padding: 30px;
+    margin-bottom: 30px;
+  
+  
+  .login-header {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  
+  .login-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+    &input {
+        height: 50px;
+        padding: 0 20px;
+        border: 2px solid #dbdbdb;
+        margin-bottom: 20px;
+    }
+  }
+  
+
+  
+  .login-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 250ms all;
+    transition: 250ms all;
+  
+    & a {
+        color: #a19f9f;
+        & :hover {
+            color: crimson;
+        }
+        
+        & :first-child {
+            background-color: royalblue;
+            width: 90px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            border-radius: 3px;
+            -webkit-transition: 250ms all;
+            transition: 250ms all;
+            & :hover {
+                background-color: black;
+            }
+        }
+        
+
+    }
+  }
+}
+  

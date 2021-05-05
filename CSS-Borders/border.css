@@ -1,0 +1,6 @@
+#par-1{
+    border-style: groove dashed;
+    border-width: 8px 3px;
+    border-color: rgba(255,255,0,0.4);
+    border-radius: 5px;
+}

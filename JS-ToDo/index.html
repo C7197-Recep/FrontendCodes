@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>To Do App</title>
+</head>
+<body>
+    <header>
+        <h1>My To Do List</h1>
+    </header>
+
+    <main>
+        <div id="input-div">
+            <form action="javascript:void(0);">
+                <input id="todo" name="text" type="text" placeholder="I will..." required>
+                <button id="add" onclick="add_to_list()">+</button>
+            </form>
+                <button id="clear" onclick="clear_all()">Clear All</button>
+        </div>
+        <div id="list-div">
+        </div>
+    </main>
+    
+    <script src="todo.js"></script>    
+</body>
+</html>

@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Form</title>
+    <style>
+        :root {
+            --mycolor: lightseagreen;
+        }
+        * {
+            transition: 1s ease-in;
+            
+        }
+        main {
+            width: 50%;
+            margin: 1rem auto;
+            background-color: #f4f7f8;
+            padding: 0.5rem 1.5rem;
+            border-radius: 1rem;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        #btn1, #btn2 {
+            width: 30%;
+            display: block;
+            margin: 0.5rem auto;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;                        padding: 0.1rem;
+            font-size: 1.3rem;
+            border-radius: 0.5rem;
+            background-color: var(--mycolor) ;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            border: 2px solid var(--mycolor)  ;
+        }
+        #btn1:hover, #btn2:hover {
+            background-color: white;
+            color: var(--mycolor)  ;
+        }
+
+        #info {
+            width: 100%;
+
+        }
+
+        textarea, #name, #email, #password, #role {
+            width: 100%;
+            background-color: rgb(231, 231, 231);
+            border: none;
+            padding: 1rem 0.5rem;
+            }
+
+#show {
+    float: right;
+    
+}
+
+fieldset {
+    border-color: var(--mycolor) ;
+}
+
+        
+
+    form * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+    }
+
+    #background {
+        background-color: var(--mycolor) 
+    }
+    </style>
+</head>
+<body id="background">
+
+    <main>
+        <div id="info">
+            <form action="results.html">
+                <button type="submit" id="btn1">Submit</button>
+
+                <fieldset>
+                    <legend>Your Basic Info</legend>
+                    
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="email" name="email" id="email">
+                    <br>
+                    <label for="password">Password:</label>
+                    <br>
+                    <input type="password" name="password" id="password">
+                    <input type="checkbox" name="show" id="show" onclick="showPass()">
+                    <label for="show" id="show">show password</label>
+
+                    <p>Age:</p>
+                                
+                    
+                    <input type="radio" name="under13" id="under13">
+                    <label for="under13">Under 13</label>
+                    <br>
+                    
+                    
+                    <input type="radio" name="over13" id="over13">
+                    <label for="over13">Over 13</label>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>Your Profile</legend>
+                        
+                        <label for="textarea">Bio:</label>
+                        <br>
+                        <textarea name="textarea" id="textarea" >enter your biographic info here...</textarea>
+                        <br><br>
+                    <label for="role">Job Role:</label>
+                    <br>
+                    <select name="role" id="role">
+                        <optgroup label="Web">
+                            <option value="Front-End Developer">Front-end Developer</option>
+                            <option value="Python Developer">Python Developer</option>
+                            <option value="Javascript Developer">Javascript Developer</option>
+                            <option value="Django Developer">Django Developer</option>
+                            <option value="Full-Stack Developer">Full-Stack Developer</option>
+                        </optgroup>
+                        <optgroup label="Mobile">
+                            <option value="Android Developer">Android Developer</option>
+                            <option value="IOS Developer">IOS Developer</option>
+                            <option value="Mobile Designer">Mobile Designer</option>
+                        </optgroup>
+                        <optgroup label="Business">
+                            <option value="Business Owner">Business Owner</option>
+                            <option value="Freelancer">Freelancer</option>
+                        </optgroup>
+                    </select>
+                    <p>Interests:</p>
+                    <input type="checkbox" name="design" id="design">
+                    <label for="design">Design</label>
+                    <br>
+                    <input type="checkbox" name="development" id="development">
+                    <label for="development">Development</label>
+                    <br>
+                    
+                    <input type="checkbox" name="business" id="business">
+                    <label for="business">Business</label>
+                    <br>
+
+                    </fieldset>
+                    <button type="submit" id="btn2">Submit</button>
+
+            </form>
+        </div>
+    </main>
+    <script>
+        function showPass() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+
+        var i = 0;
+function change() {
+    var r = document.querySelector(':root');
+  var color = [
+  "AliceBlue",
+  "AntiqueWhite",
+  "Aqua",
+  "Aquamarine",
+  "Azure",
+  "Beige",
+  "Bisque",
+  "Black",
+  "BlanchedAlmond",
+  "Blue",
+  "BlueViolet",
+  "Brown",
+  "BurlyWood",
+  "CadetBlue",
+  "Chartreuse",
+  "Chocolate",
+  "Coral",
+  "CornflowerBlue",
+  "Cornsilk",
+  "Crimson",
+  "Cyan",
+  "DarkBlue",
+  "DarkCyan",
+  "DarkGoldenRod",
+  "DarkGray",
+  "DarkGrey",
+  "DarkGreen",
+  "DarkKhaki",
+  "DarkMagenta",
+  "DarkOliveGreen",
+  "DarkOrange",
+  "DarkOrchid",
+  "DarkRed",
+  "DarkSalmon",
+  "DarkSeaGreen",
+  "DarkSlateBlue",
+  "DarkSlateGray",
+  "DarkSlateGrey",
+  "DarkTurquoise",
+  "DarkViolet",
+  "DeepPink",
+  "DeepSkyBlue",
+  "DimGray",
+  "DimGrey",
+  "DodgerBlue",
+  "FireBrick",
+  "FloralWhite",
+  "ForestGreen",
+  "Fuchsia",
+  "Gainsboro",
+  "GhostWhite",
+  "Gold",
+  "GoldenRod",
+  "Gray",
+  "Grey",
+  "Green",
+  "GreenYellow",
+  "HoneyDew",
+  "HotPink",
+  "IndianRed",
+  "Indigo",
+  "Ivory",
+  "Khaki",
+  "Lavender",
+  "LavenderBlush",
+  "LawnGreen",
+  "LemonChiffon",
+  "LightBlue",
+  "LightCoral",
+  "LightCyan",
+  "LightGoldenRodYellow",
+  "LightGray",
+  "LightGrey",
+  "LightGreen",
+  "LightPink",
+  "LightSalmon",
+  "LightSeaGreen",
+  "LightSkyBlue",
+  "LightSlateGray",
+  "LightSlateGrey",
+  "LightSteelBlue",
+  "LightYellow",
+  "Lime",
+  "LimeGreen",
+  "Linen",
+  "Magenta",
+  "Maroon",
+  "MediumAquaMarine",
+  "MediumBlue",
+  "MediumOrchid",
+  "MediumPurple",
+  "MediumSeaGreen",
+  "MediumSlateBlue",
+  "MediumSpringGreen",
+  "MediumTurquoise",
+  "MediumVioletRed",
+  "MidnightBlue",
+  "MintCream",
+  "MistyRose",
+  "Moccasin",
+  "NavajoWhite",
+  "Navy",
+  "OldLace",
+  "Olive",
+  "OliveDrab",
+  "Orange",
+  "OrangeRed",
+  "Orchid",
+  "PaleGoldenRod",
+  "PaleGreen",
+  "PaleTurquoise",
+  "PaleVioletRed",
+  "PapayaWhip",
+  "PeachPuff",
+  "Peru",
+  "Pink",
+  "Plum",
+  "PowderBlue",
+  "Purple",
+  "RebeccaPurple",
+  "Red",
+  "RosyBrown",
+  "RoyalBlue",
+  "SaddleBrown",
+  "Salmon",
+  "SandyBrown",
+  "SeaGreen",
+  "SeaShell",
+  "Sienna",
+  "Silver",
+  "SkyBlue",
+  "SlateBlue",
+  "SlateGray",
+  "SlateGrey",
+  "Snow",
+  "SpringGreen",
+  "SteelBlue",
+  "Tan",
+  "Teal",
+  "Thistle",
+  "Tomato",
+  "Turquoise",
+  "Violet",
+  "Wheat",
+  "White",
+  "WhiteSmoke",
+  "Yellow",
+  "YellowGreen",
+];
+r.style.setProperty('--mycolor', color[i]);
+  i = Math.floor(Math.random()*149);
+}
+setInterval(change, 1000);
+        </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<body>
+    <form action="result.html" method="GET">
+        <div>
+            <label> Name: <input type="text" name="name" placeholder="Enter Your Name"></label>
+        </div>
+        <div>
+            <label for="surname"> Surname: </label>
+            <input type="text" id="surname" name="surname" size="10" maxlength="8" placeholder="Enter Your Surname">
+        </div>
+        <div>
+            <label for="p-word">Password:</label>
+            <input type="password" id="p-word" name="password">
+        </div>
+        <div>
+            <label for="gender">Gender:</label> <br>
+            <label for="gender-1">Male</label>
+            <input id="gender-1" type="radio" name="gender" value="male">
+            <label for="gender-2">Female</label>
+            <input id="gender-2" type="radio" name="gender" value="female" checked>
+        </div>
+        <div>
+            <label>My Vehicles:</label>
+            <input id="vec-1" type="checkbox" name="vehicle" value="bicycle">
+            <label for="vec-1">Bicycle</label>
+            <input id="vec-2" type="checkbox" name="vehicle" value="car">
+            <label for="vec-2">Car</label>
+            <input id="vec-3" type="checkbox" name="vehicle" value="yatch" checked>
+            <label for="vec-3">Yatch</label>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input style="width:200" id="age" type="number" placeholder="Enter Your Age" min="1" max="100" step="3"
+                size="30" name="age">
+        </div>
+        <div>
+            <label for="qsearch">Search On The Website</label>
+            <input id="qsearch" type="search" name="q" placeholder="Search here">
+        </div>
+        <div>
+            <label for="favcolor">Select Your Fav Color</label>
+            <input id="favcolor" type="color" name="color">
+        </div>
+        <div>
+            <label for="b-day">Birthday:</label>
+            <input id="b-day" type="date" name="date" min="1900-01-01" max="2099-01-01" value="2020-02-02">
+        </div>
+        <div>
+            <label for="file">Upload your file:</label>
+            <input id="file" type="file" name="file">
+        </div>
+        <div>
+            <label for="phone">Enter Your Phone Number:</label>
+            <input id="phone" type="tel" name="phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        </div>
+        <br><br>
+        <input type="submit" value="send it to the server">
+        <input type="reset" value="Reset Them All" accesskey="r">
+    </form>
+</body>
+</html>

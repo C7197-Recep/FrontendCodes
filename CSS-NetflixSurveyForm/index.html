@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflick Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Net<span>Flick</span></h1>
+        <h4>Thank you for signing up at NetFlick. Tell us more about yourself</h4>
+    </header>
+    <main>
+
+        <form action="results.html" onclick="submitted(event)" id="formdata">
+            <div id="div_name">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" name="name" id="name" placeholder="Name" required>
+            </div>
+            
+            <div id="div_age">
+                <label for="age">Your Age</label>
+                <br>
+                <select name="age" id="age" required>
+                    <option>-Choose your age group-</option>
+                    <option value="18-25">18-25</option>
+                    <option value="25-35">25-35</option>
+                    <option value="35-45">35-45</option>
+                    <option value="45-60">45-60</option>
+                    <option value="60++">60++</option>
+                </select>            
+            </div>
+            <div id="div_mail">
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Email address" required>
+            </div>
+            <div id="div_content">
+                <label for="content">Content Type</label>
+                <br>
+                <select name="content" id="content" required>
+                    <option value="Drama">Drama</option>
+                    <option value="Movie">Movie</option>              
+                <option value="Comedy">Comedy</option>
+                <option value="History">History</option>
+                <option value="Documentary">Documentary</option>
+                <option value="Martial_Arts">Martial Arts</option>
+                <option value="Adventure">Adventure</option>
+                
+                
+                </select>
+
+            </div>
+            <br>
+            <div id="div_movie">
+                <p>Movie Type</p>
+               <input type="checkbox" name="comdey" id="comedy" >
+               <label for="comedy">Comedy</label>
+               <br>
+               <input type="checkbox" name="action" id="action">
+               <label for="action">Action</label>
+               <br>
+               <input type="checkbox" name="romance" id="romance">
+               <label for="romance">Romance</label>
+            </div>
+            <br>
+            <div id="gender"> 
+                <p>Gender</p>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="not">
+                <label for="not">Not Specified</label>
+            </div>
+            <br>
+            <div id="div_feedback">
+                <p>Feedback</p>
+                <textarea name="feedback" id="feedback" cols="auto" rows="auto" placeholder="Write any commments here..."></textarea>
+            </div>
+            <button type="submit" >Send</button>
+       
+        </form>
+    </main>
+
+</body>
+</html>

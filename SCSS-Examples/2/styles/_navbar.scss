@@ -1,0 +1,90 @@
+@import "colors", "media-queries";
+
+.navbar__logo, .navbar__menu, .navbar__menu--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  @extend %align-center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*INHERITANCE OZELLIGI KULLANMAK ICIN BASA % KONULUYOR*/
+%align-center{
+  display: flex;
+  text-align: center;
+}
+
+%webkit{
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  background: #F7F7F7;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+  &__logo {
+    color: $dark;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 24px;
+  }
+  &__bars {
+    opacity: 0;
+  }
+  @include tablet {
+    &__bars {
+      color: $dark;
+      opacity: 1;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      font-size: 2rem;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    text-align: center;
+    margin-right: 24px;
+
+    @include tablet {
+        display: none;
+    }
+    &--links {
+      color: $dark;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-decoration: none;
+      padding: 0 1rem;
+    }
+    &--links:hover {
+      color: $lime;
+      @extend webkit;
+    }
+    & #button {
+      padding: 12px 24px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      background: $lime;
+      margin-left: 16px;
+      color: $light;
+      &:hover {
+        background: $orengeRed;
+        @extend %webkit;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guess.css">
+    <title>Guess the number game</title>
+</head>
+<body>
+    <header>
+        <h1>Guess The Number Game</h1>
+        <h3>Guess the number on my mind.</h3>
+        <h3>Between 1-100</h3>
+    </header>
+
+    <main>
+        <div id="input-div">
+            <input id="number" name="number" type="number" placeholder="1-100">
+            <button id="check" onclick="check()">Check</button>
+        </div>
+        <div id="report">
+            <p>Your Answer: <span id="answer">No answers yet</span></p>
+            <p >Attempts Left: <span id="attempt">5</span></p>
+            <p id="feedback">Ready?</p>            
+            <button id="retry" onclick="retry()" hidden>Retry</button>
+        </div>
+    </main>
+    
+    <script src="guess.js"></script>
+</body>
+</html>

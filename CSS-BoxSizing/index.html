@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+</head>
+<style>
+    /*NOTLAR
+    Border-box yapınca padding dış kutuyu değiştirmiyor. Content-box yapınca değiştiriyor.
+    */
+div{
+    border:3px solid black;    
+    padding:50px;
+}
+h2{
+    border:3px solid black;
+    text-align: justify; /*center, justify, right*/
+    box-sizing: content-box; /*content-box, border-box*/
+    padding:50px;
+    text-decoration: underline; /*overline, linethrough, underline, none*/
+    text-transform: capitalize; /*capitalize, uppercase, lowercase*/
+    text-indent: 50px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    direction: rtl;
+    /*unicode-bidi: bidi-override;*/
+    word-spacing: 15px;
+    text-shadow: 1px 5px 4px blue; /*x kayıklık, y kayıklık, flulaştırma, renk*/
+    font-family: 'Akaya Kanadaka', cursive;
+    font-style: oblique;/*normal, italic, oblique*/
+    font-size: 5vw; /*vw : ekran yüzdesi, rm / rem: 16 px in katları */
+    font-weight: lighter;
+    font-variant: small-caps; /*Küçük harfler büyük harfe çevrilir fakat boyutu küçük kalır*/
+
+}
+#link-1{
+    color:black;
+    background-color: coral;
+    font-size: 20px;
+    padding:10px;
+    border-radius: 10px;
+}
+#link-1:hover{
+    background-color: cyan;
+}
+</style>
+<body>
+    
+    <div>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse sed consectetur repellendus ratione culpa corporis aliquid ut, explicabo est voluptatum. </h2>
+        <a href="" id="link-1">BU BİR LİNK</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        #main{
+            width:600px;
+            height:600px;
+            background-color: gray;
+        }
+        .box-1
+        {
+            width:100px;
+            height:100px;
+            background-color:red;
+            /*
+            relative, elementin kendi konumuna göre yerleştiriyor.
+            absolute en üste getirip element yokmuş gibi 
+            sıradan çıkartıyor. Bir üstteki konteynere göre konumlanıyor
+            sticky belirlenen noktaya kadar kendi konumunda, o noktayı
+            geçince o noktaya yapışıyor.*/
+            position:absolute;         
+            /*z-index position olmadan çalışmıyor*/
+            }
+        .box-2
+        {
+            width:100px;
+            height:100px;
+            background-color:rgb(9, 245, 9);
+            left:50px;
+        }
+        .box-3
+        {
+            width:100px;
+            height:100px;
+            background-color:blue;
+            position:absolute;
+            left:100px;
+        }
+        .box-4{
+            display:inline-block;
+        }
+        ol{
+            list-style-type: "\1F44D";
+            list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAwFBMVEVHcEznW3D/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3oXm/nW3DnW3DnW3DnW3DnW3DnW3DnW3DnW3D9xE/qaGz/zE1mRQD1xEjnW3CziSfGmTBwTQXsu0N5VgqfeB2MZxPZqjqWbxi8kSuDXg6pgCJwRQeCShjeMUbpYm77t1SqUDrfWmnisz/jSV78vlHsmVXgOU7hQVbVWGD2olrmWG3JOT34qVjPojXscGnlUWaOTCPHVlQHbtUOAAAAGXRSTlMAgK9g349QIJ/vv0DPgLoQOt+fz1hw7++PxUrK9gAAAoJJREFUeF7tmFmP2yAQgJ3YxCbHbrLdbTuA79x7H72v//+vao3QykCCCa7al35vCOvLeAaHgcBCHJJxBJJoTMI48GCURGAQJaPTLDGhcARK3OOaDMHKcOIWTQKdJA5RzSg4QGdd4UzBkak1qBEFZ6ilgDM4iaOvl8CJJFaPv8nfgyZ7fvzzNAJPtNrFFDyh6nqagjdTLUH+zMwX8385s/K91sAEejKRoiH0ZCgzBL2JUUSgNwRFFHpD5cfRn5FZe/8VEIECz1Y5a8hXGQdwnYuMmqU5eyVP3efiIFTCqZlCzR3mkFApPt8wjQ3vnkNIMG6Ntigo02VDWuJg2z2HjNu55uhZg2SNQ5DY5jDb0II1ZPBKhqLuOUQRpYyl+tg2p4n8+Vei/6II/giR8okA5+DJOCD6InPBfJYEofatFeBEoX0iYRBrojU4kWmiWPmr3TSiDXRjPhrhxq/+zBIcWGp/Bom6HfG8EdXgQM329+JZ69touxQNmUuGdh+FEJ+UDTIgWkh5Z+GKnN0J0TIRo4lYM5d8b9heiLYpNtsa3HMqsFKx3b2QfJVtDTJRou40VZggyc2tbLSM1u/bgd1P20N3Xz6Ltik53IxmaCqPLKdl2XiuX9qmd7HSHusmtirAoFixZgF9uFZMZ2rDbpqY1nPwrNFg3VXT2/OjR4iHkknqNFsiWYr13GOaNdPl8UMN37JD/PyFGt00sB2zisrQ3MmiG6aB/eBXbEtVJBWmadB5hHxYVzWT1NXz0+2NavohkKvTD6OK6fFRDuYex1E0aSzsFwjupkuvKw3TdOZ1yWKa3px7X/s8fdc8/hdR7xdSs7jqezU2H1ycXQzmf+Gyzv/68DdbMachYzWNdAAAAABJRU5ErkJggg==");
+            list-style-position:inside;
+            list-style: square inside "\1f44d";
+        }
+        li:before {
+            content:"\2764";
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="box-1" class="box-1"></div>
+        <div id="box-2" class="box-2"></div>
+        <div id="box-3" class="box-3"></div>
+        <ol>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+        </ol>
+    </div>
+</body>
+</html>

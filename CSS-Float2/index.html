@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border:1px solid;
+            text-align: center;
+        }
+        header{margin-bottom:10px;
+        }
+        main{
+            background-color: aqua;
+            /*icindeki elementler float olursa 
+            overflowu engellemek gerek*/
+            /*overflow:auto;*/
+            padding:5px;
+        }
+        aside{
+            background-color: blueviolet;
+            width:25%;
+            height:300px;
+            float:left;
+        }
+        article{
+            background-color: brown;
+            width:70%;
+            height:300px;
+            float:right;
+        }
+        /*float, elementi z ekseninde öne taşıyor. o yüzden taşıyıcı element
+        yani main içi boş kalmış gibi davranış çizgi halinde görünüyor.
+        içinde float olan ana elementte parent collapse engellemek icin
+        1. overflow:auto yapılabilir
+        2. height verilebilir
+        3. bir dive clearfix sınıfı tanımlanabilir (tavsiye edilen)
+        4. bir dive clear sınıfı tanımlanabilir
+        */
+        .clearfix:after{
+            content:"";
+            clear:both;
+            display:block;
+        }
+        .clear{
+            clear:left;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <main>
+        <aside>Aside</aside>
+        <article>Article</article>
+        <div class="clearfix"></div>
+    </main>
+    <footer>Footer</footer>
+</body>
+</html>

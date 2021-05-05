@@ -1,0 +1,22 @@
+
+
+
+.item {
+    text-align: center;
+    font-size: 25px;
+    
+}
+@for $i from 1 through 4{
+    .item-#{$i}{
+        padding: 5px * $i;     
+        margin: 10px;
+        background-color: #888;
+        margin-top: 15px;   
+    }
+}
+// @for $i from 1 through 4{
+//     @extend .item;
+//     .item-#{$i}{
+//         padding: 5px * $i;  
+//     }
+// }

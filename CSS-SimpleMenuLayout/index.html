@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: gainsboro;
+            background-image: url("images/image1.jpg");
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity:0.7;
+            color:whitesmoke;
+        }
+
+        .card {
+        width: 150px;                 /* Set width of cards */
+        display: flex;                /* Children use Flexbox */
+        flex-direction: column;       /* Rotate Axis */
+        border: 1px solid #EF9A9A;    /* Set up Border */
+        border-radius: 4px;           /* Slightly Curve edges */
+        overflow: hidden;             /* Fixes the corners */
+        margin: 5px;                  /* Add space between cards */
+        }
+
+        .card-header {
+        color: #D32F2F;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 600;
+        border-bottom: 1px solid #EF9A9A;
+        background-color: #FFEBEE;
+        padding: 5px 10px;
+        }
+
+        .card-main {
+        display: flex;              /* Children use Flexbox */
+        flex-direction: column;     /* Rotate Axis to Vertical */
+        justify-content: center;    /* Group Children in Center */
+        align-items: center;        /* Group Children in Center (on cross axis) */
+        padding: 15px 0;            /* Add padding to the top/bottom */
+        }
+
+        .material-icons {
+        font-size: 36px;
+        color: #D32F2F;
+        margin-bottom: 5px;
+        }
+
+        .main-description {
+        color: #D32F2F;
+        font-size: 12px;
+        text-align: center;
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .red{
+            color:red;
+        }
+        .blue .card-header{
+            color:blue;
+            background-color:rgb(209, 221, 240)
+        }
+        .green .card-header{
+            color:green;
+            background-color:rgb(162, 231, 177)
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contents of This Repo</h1>
+    </header>
+    <main>
+        <a href="parallax.html">
+            <div class="card red">
+                <div class="card-header">Parallax Webpage</div>
+                <div class="card-main">
+                    <i class="material-icons">hot_tub</i>
+                    <div class="main-description">Hot</div>
+                </div>
+            </div>
+        </a>
+        <a href="fibonacci.html">
+            <div class="card blue">
+                <div class="card-header">Fibonacci</div>
+                <div class="card-main">
+                    <i class="material-icons">hot_tub</i>
+                    <div class="main-description">Hot</div>
+                </div>
+            </div>
+        </a>
+        <a href="reverse-string.html">
+            <div class="card green">
+                <div class="card-header">String Reverse</div>
+                <div class="card-main">
+                    <i class="material-icons">hot_tub</i>
+                    <div class="main-description">Hot</div>
+                </div>
+            </div>
+        </a>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

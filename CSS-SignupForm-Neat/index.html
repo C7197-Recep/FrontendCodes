@@ -1,0 +1,88 @@
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="index.html" method="post">
+                    <h1> Sign Up </h1>
+    
+                    <fieldset>
+    
+                        <legend> Your Basic Info</legend>
+    
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" class="input">
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="mail" name="user_email" class="input">
+    
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="user_password" class="input">
+    
+                        <label>Age:</label><br>
+                        <input type="radio" id="under_13" value="under_13" name="user_age">
+                        <label for="under_13" class="light check-radio">Under 13</label><br>
+                        <input type="radio" id="over_13" value="over_13" name="user_age">
+                        <label for="over_13" class="light check-radio">Over 13</label>
+    
+                    </fieldset>
+                    <fieldset>
+    
+                        <legend>Your Profile</legend>
+    
+                        <label for="bio">Bio:</label>
+                        <textarea id="bio" name="user_bio" class="input"></textarea>
+    
+    
+    
+                        <label for="job">Job Role:</label>
+                        <select id="job" name="user_job" class="input">
+                            <optgroup label="Web">
+                                <option value="frontend_developer">Front-End Developer</option>
+                                <option value="js_developer">JS Developer</option>
+                                <option value="python_developer">Python Developer</option>
+                                <option value="django_developer">Django Developer</option>
+                                <option value="web_designer">Web Designer</option>
+                                <option value="wordpress_developer">Wordpress Developer</option>
+                            </optgroup>
+                            <optgroup label="Mobile">
+                                <option value="android_developer">Android Developer</option>
+                                <option value="ios_developer">IOS Developer</option>
+                                <option value="mobile_designer">Mobile Designer</option>
+                            </optgroup>
+                            <optgroup label="Business">
+                                <option value="business_owner">Business Owner</option>
+                                <option value="freelancer">Freelancer</option>
+                            </optgroup>
+                        </select>
+    
+                        <label>Interests:</label> <br>
+                        <input type="checkbox" id="development" value="interest_development" name="user_interest"
+                            class="check-radio">
+                        <label for="development">Development</label><br>
+                        <input type="checkbox" id="design" value="interest_design" name="user_interest" class="check-radio">
+                        <label for="design">Design</label><br>
+                        <input type="checkbox" id="business" value="interest_business" name="user_interest"
+                            class="check-radio">
+                        <label for="business">Business</label>
+    
+                    </fieldset>
+    
+                    <input type="submit" value="Sign Up" id="submit">
+    
+                </form>
+            </div>
+        </div>
+    
+    </body>
+    
+    </html>

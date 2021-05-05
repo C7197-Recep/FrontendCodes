@@ -1,0 +1,15 @@
+.item {
+    text-align: center;
+    font-size: 25px;
+
+}
+
+@for $i from 1 through 4 {
+    .item-#{$i} {
+        background-color: $background-color;
+        margin-top: $size / 2;
+        border: 3px solid blue;
+        margin: 10px;
+        padding: 5px * $i;
+    }
+}

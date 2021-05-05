@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+    
+    <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
+<style>
+    body{
+        
+    }
+    #title{
+
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1 id="title">Checkout</h1>
+    </header>
+    <main>
+        <form action="">
+            <div id="contact-info">
+                <h1>Contact Information</h1>
+                <label for="email">Email</label>
+                <div class="form-field">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email..." required>
+                </div>
+                <label for="phone">Phone</label>
+                <div class="form-field">
+                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone..." required>
+                </div>
+            </div>
+            <div id="shipping-address">
+                <h1>Shipping address</h1>
+                <label for="name">Full name</label>
+                <div class="form-field">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <input type="text" id="name" name="name" placeholder="Enter your Full name...">
+                </div>
+                <label for="address">Address</label>
+                <div class="form-field">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <input type="text" id="address" name="address" placeholder="Enter your address...">
+                </div>
+                <label for="city">City</label>
+                <div class="form-field">
+                    <i class="fas fa-city" aria-hidden="true"></i>
+                    <input type="text" name="city" id="city" placeholder="Enter your city...">
+                </div>
+                <label for="country"></label>
+                <div class="form-field">
+                    <i class="fas fa-globe" aria-hidden="true"></i>
+                    <select name="country" id="country">
+                        <option value="Turkey">Turkey</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Canada">Canada</option>
+                        <option value="UK">UK</option>
+                    </select>
+                </div>
+                <label for="post-code">Post code</label>
+                <div class="form-field">
+                    <i class="fas fa-mail-bulk" aria-hidden="true"></i>
+                    <input type="number" name="post-code" id="post-code" placeholder="Enter your postal code...">
+                </div>
+                <div class="form-field">
+                    <input type="checkbox" name="reminder" id="reminder">
+                    <label for="reminder">See this information next time</label>
+                </div>
+            </div>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        <div id="products-view">
+
+            <div class="product">
+                <img src="photo1.png" alt="Bag">
+                <div class="product-info">
+                    <h2>Vintage Backbag</h2>
+                    <p><strong>$54.99</strong> <span class="deleted">$94.99</span></p>
+                    <div class="quantity">
+                        <button>
+                            <i class="fas fa-minus" aria-hidden="true"></i>
+                        </button>
+                        <p>1</p>
+                        <button>
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>                        
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="photo2.png" alt="Bag">
+                    <div class="product-info">
+                        <h2>Levi Shoes</h2>
+                        <p><strong>$74.99</strong> <span class="deleted">$124.99</span></p>
+                        <div class="quantity">
+                            <button>
+                                <i class="fas fa-minus" aria-hidden="true"></i>
+                            </button>
+                            <p>1</p>
+                            <button>
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                            </button>                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

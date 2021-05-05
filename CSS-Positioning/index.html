@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 200px 10px;
+        }
+        body > *{
+            border:1px solid red;
+            overflow:auto;
+            position:relative;
+            display:block;
+            margin:0 0 20px 0;
+            min-height: 100px;
+            justify-content:center;
+            padding:30px 0;
+            box-sizing:border-box;
+            margin:10px 0;
+            line-height: 1;
+        }
+
+        section1 div{
+            border:1px solid blue;
+            position:relative;
+            display:inline-block;
+            margin:0 20px;
+        }
+        section2 span{
+            border:1px solid orange;
+            display:block;
+        }
+
+        section3 div{
+            border: 1px solid green;
+            display:inline-block;
+            width:50px;
+            height:50px;
+        }
+        
+        section4 div:first-child{
+            display: none;
+        }
+
+        section5 div{
+            background-color:rgb(204, 204, 223);
+            padding:20px;
+            width:50%;
+            margin:auto;
+        }
+        section5 div a:link{
+            width:50%;
+        }        
+        section5 div a:hover{
+            color:blueviolet;
+        }
+
+        section6 div{
+            border:10px solid black;
+            padding:20px;
+            width:50%;
+            margin:auto;
+        }
+
+        section7 div{
+            border:10px solid black;
+            padding:20px;
+            width:50%;
+            margin:auto;
+            box-sizing:border-box;
+        }
+
+        section8 img{
+            float:left;
+            margin:0 10px 10px 0;
+        }
+
+        section9 img{
+            float:right;
+            margin:0 0 10px 10px;
+        }
+
+
+        section10 img{
+            float:left;
+            margin:10px;
+        }
+        section10 span{
+            float:left;
+            margin:10px;
+        }
+        section10 p{
+            clear:left;
+            margin: 10px;
+        }
+
+        section11 div{
+            background-color: aquamarine;
+            overflow: auto;
+        }
+        section11 img{
+            float:left;
+            margin:10px;
+        }
+        section11 span{
+            float:left;
+            margin:10px;
+        }
+        section11 p{
+            clear:left;
+            margin: 10px;
+        }
+               
+        section12 article:first-child{
+            float:left;
+            width:50%;
+            border-right:1px solid black;
+            padding:10px;
+            box-sizing: border-box;
+        }
+        section12 article:nth-child(2){
+            float:right;
+            width:49%;
+            padding:10px;
+            box-sizing: border-box;
+        }
+        section12 article:nth-child(3){
+            clear:both;
+        }
+
+        section13 div{
+            height:50px;
+            width:50px;
+            background-color: aqua;
+            position:relative;
+        }
+        section13 div:nth-child(even){
+            left:50px;
+            background-color:aquamarine
+        }
+
+        section14 div{
+            border:1px solid black;
+            overflow:visible;
+            position: relative;
+        }
+        section14 span{
+            position: absolute;
+        }
+        section14 span:nth-child(1){
+            top:0;
+            left:0;
+        }
+        section14 span:nth-child(2){
+            top:0;
+            right:0;
+        }
+        section14 span:nth-child(3){
+            bottom:0;
+            right:0;
+        }
+        section14 span:nth-child(4){
+            bottom:0;
+            left:0;
+        }
+    
+        section15 div{
+            border:1px solid black;
+            overflow:auto;
+            height:100px;
+            position: relative;
+            margin-top:50px;
+        }
+        section15 span{
+            position: absolute;
+        }
+        section15 span:nth-child(1){
+            top:0;
+            left:0;
+        }
+        section15 span:nth-child(2){
+            top:0;
+            right:0;
+        }
+        section15 span:nth-child(3){
+            bottom:0;
+            right:0;
+        }
+        section15 span:nth-child(4){
+            bottom:0;
+            left:0;
+        }
+
+        section16{
+            position:relative;
+            display:block;
+            height:100px;
+            padding:30px 0;
+            border:1px solid black;
+        }
+        section16 div{
+            position: relative;
+            display: inline;
+            margin:auto;
+            border:1px solid black;
+        }
+        section16 div:nth-child(2){
+            position:absolute;
+            top:0;
+        }
+
+        section17{
+            height:9rem;
+        }
+        section17 div:nth-child(1){
+            width:1rem;
+            height:1rem;
+            background-color:black;
+            outline: 4rem solid lightgray;
+            position:absolute;
+            left:4rem;
+            top:4rem;
+        }
+        section17 div:nth-child(2){
+            width:1rem;
+            height:1rem;
+            background-color:black;
+            outline: 4rem solid lightgray;
+            position:absolute;
+            right:4rem;
+            top:4rem;
+        }
+        label{
+            background-color: gray;
+            color:white;
+            height:10px;
+            display: inline;
+            border:none;
+            font-family: Arial, Helvetica, sans-serif;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <label>#display-01</label>
+    <section1>
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+    </section1>
+
+    <br><br>
+
+    
+    <label>#display-02</label>
+    <section2>
+        <span>one</span>
+        <span>two</span>
+        <span>three</span>
+    </section2>
+
+    <br><br>
+
+    
+    <label>#display-03</label>
+    <section3>
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+    </section3>
+  
+    <br><br>
+
+    
+    <label>#display-04</label>
+    <section4>
+        <div>I should be hidden</div>
+        <div>I should be showing</div>
+    </section4>
+
+    <br><br>
+
+    <label>#display-05</label>
+    <section5>
+        <div>
+            <a href="#" onclick="alert('clicked!');">click me</a>
+        </div>
+    </section5>
+
+    <br><br>
+
+    <label>#box-model-01</label>
+    <section6>
+        <div>
+            Default content box model
+        </div>
+    </section6>
+
+    <br><br>
+
+    <label>#box-model-02</label>
+    <section7>
+        <div>
+            Default content box model
+        </div>
+    </section7>
+
+    <br><br>
+
+    <label>#float-01</label>
+    <section8>
+        <div>
+            <img src="http://placekitten.com/100/100" alt="">
+            Kitten Placeholder
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </div>
+    </section8>
+
+    <br><br>
+
+    <label>#float-02</label>
+    <section9>
+        <div>
+            <img src="http://placekitten.com/100/100" alt="">
+            <span>
+            Kitten Placeholder
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.                
+            </span>
+
+        </div>
+    </section9>
+
+    <br><br>
+
+    <label>#float-03</label>
+    <section10>
+        <div>
+            <img src="http://placekitten.com/100/100" alt="">
+            <span>
+            Kitten Placeholder
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+            </span>
+
+            <p>
+             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.                
+            </p>
+
+        </div>
+    </section10>
+
+    <br><br>
+    
+    <label>#float-04</label>
+    <section11>
+        <div>
+            <img src="http://placekitten.com/100/100" alt="">
+            <span>
+            Kitten Placeholder
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+            </span>
+        </div>
+            <p>
+             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.                
+            </p>
+
+
+    </section11>
+
+    <br><br>
+
+    
+    <label>#float-05</label>
+    <section12>
+        <article>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at porttitor quam. Aenean sem urna, sollicitudin sed aliquet non, fermentum vitae ipsum. Proin et consectetur sapien, a elementum dolor. Praesent convallis, lorem vel consectetur lobortis, leo arcu egestas diam, iaculis vehicula orci turpis at ligula. Sed lacinia ante metus, vitae tincidunt turpis tristique posuere. Nulla scelerisque risus a augue dignissim, sed pulvinar libero maximus. Ut ullamcorper eget ante nec varius. Nam non mollis lacus. Nulla interdum, risus id ultrices porttitor, quam mi cursus ex, eu malesuada eros ligula at quam. Maecenas in libero lectus. Vivamus vitae nunc vitae sapien interdum blandit.
+        </article>
+        <article>
+            Duis non orci erat. Integer cursus placerat consequat. Praesent malesuada commodo porta. Phasellus finibus, metus ut efficitur aliquam, arcu turpis euismod lectus, ut auctor sapien nisi id nisi. Sed tristique felis vel ex lacinia iaculis. Aliquam mi eros, finibus sit amet felis quis, pulvinar interdum leo. Vestibulum ut massa faucibus magna maximus aliquam. Aenean iaculis sem tellus, ac mattis orci euismod sed. Maecenas sed finibus nulla, sit amet aliquet est. Phasellus vel ante vitae magna semper semper. Nulla posuere est finibus viverra semper. Nulla non commodo tellus. Donec dapibus erat quis nunc auctor, nec iaculis mauris vulputate. Phasellus in sapien feugiat, condimentum mi ut, egestas nisi.
+        </article>
+        <article>
+            Praesent et libero sit amet sem rutrum sollicitudin a vulputate est. Suspendisse potenti. In ac consectetur eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin vel pretium ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas sed odio vehicula mi tempus rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate commodo lectus, sed vulputate massa congue ac. Curabitur eget tellus eget urna interdum bibendum nec eget mauris. Donec euismod a nulla nec semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas ut ipsum orci. Etiam iaculis eleifend nisi eget laoreet. Integer molestie arcu at erat lacinia gravida. Maecenas hendrerit nec metus sit amet sagittis.
+        </article>
+    </section12>
+
+    <br><br>
+
+    
+    <label>#position-01</label>
+    <section13>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <article 
+        style="
+        position:absolute;
+        margin:auto;
+        top:45%;
+        left:30%;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 32px;
+        ">My Notebook</article>
+    </section13>
+
+    <br><br>
+
+    
+    <label>#position-02</label>
+    <section14>
+        <div>
+            <span>one</span>
+            <span>two</span>
+            <span>three</span>
+            <span>four</span>
+        </div>
+    </section14>
+
+    <br><br>
+
+    <label>#position-03</label>
+    <section15>
+        <div>
+            <span>one</span>
+            <span>two</span>
+            <span>three</span>
+            <span>four</span>
+        </div>
+    </section15>
+
+    <br><br><br>
+
+    
+    <label>#position-04</label>
+    <section16>
+        <div>At top of page:</div>
+        <div>I'am out of order</div>
+        <div>CSS Positioning</div>
+        <div>This section:</div>
+    </section16>
+
+    <br><br>
+
+    <label>#position-05</label>
+    <section17>
+        <div></div>
+        <div></div>
+    </section17>
+</body>
+</html>
