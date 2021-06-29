@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="isim" type="text" placeholder="İsminiz">
+    <input id="yorum" type="text" placeholder="Yorumunuzu Yazın">
+    <button id="ekle">Ekle</button>    
+    <div id="yorumlar"></div>
+    <script>
+        var yorumsayisi=0;
+        var ekle=document.getElementById("ekle");
+        var isim=document.getElementById("isim");
+        var yorum=document.getElementById("yorum");
+        var yorumlar=document.getElementById("yorumlar");
+
+
+        
+        ekle.addEventListener("click", function() {
+
+            yorumsayisi += 1;
+            let div = document.createElement("div");
+            div.setAttribute("id",yorumsayisi)
+            let sil = document.createElement("button");
+            sil.append("Sil");
+
+            sil.addEventListener("click", (e) => {
+                yorumlar.removeChild(e.target.parentElement);
+            })
+
+
+            let strong = document.createElement("strong")
+            let isim_p = document.createElement("p")
+            let yorum_p = document.createElement("p")
+            strong.append(isim.value);
+            isim_p.append(strong);
+            yorum_p.append(yorum.value);
+            div.append(isim_p);
+            div.append(yorum_p);
+            div.append(sil);
+            yorumlar.append(div);
+        });
+
+    </script>
+</body>
+</html>

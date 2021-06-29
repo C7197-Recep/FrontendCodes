@@ -1,0 +1,11 @@
+{
+  "name": "JS-Modules",
+  "version": "1",
+  "description": "Example module usages",
+  "main": "index.js",
+  "repository": "./",
+  "author": "Raymond",
+  "license": "MIT",
+  "private": null,
+  "type":"module"
+}
